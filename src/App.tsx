@@ -243,7 +243,7 @@ const LetterSection = () => {
               }`}
             >
               Jujur, beberapa bulan ke depan bakal jadi tantangan baru buat kita ya. Kamu happy-happy di{' '}
-              <span className="font-semibold text-pink-accent">Balikpapan</span> sama Papa Mama kamu. Bakal
+              <span className="font-semibold text-pink-accent">Balikpapan</span> sama Papa Mama kamu yaaa sayangggg. Bakal
               kangen lebih berat sih pastinya. Keinget kita di <span className="font-semibold text-pink-accent">Bandung</span>, kangen cerewetnya kamu, kangen randomnya kita kalo lagi{' '}
               <span className="italic">hunting makan</span>, atau sekadar ngobrolin hal gak jelas.
             </p>
@@ -474,60 +474,85 @@ const GallerySection = () => {
     { src: '/couple-3.jpg', caption: 'Gaya Foto Wishlist Kita', rotation: 2 },
   ];
 
-  return (
-    <section
-      ref={sectionRef}
-      className="min-h-screen relative py-20 px-4 md:px-8 bg-gradient-to-b from-pink-soft/50 via-white to-pink-soft/30"
-    >
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2
-            className={`font-display text-4xl md:text-6xl text-love-dark mb-4 transition-all duration-700 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-          >
-            Our Memories
-          </h2>
-          <p
-            className={`font-body text-lg text-love-light transition-all duration-700 delay-300 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-          >
-            Kangen Bangett Woiiii Sayanggggggg............
-          </p>
-        </div>
+return (
+  <section
+    ref={sectionRef}
+    className="min-h-screen relative py-20 px-4 md:px-8 bg-gradient-to-b from-pink-soft/50 via-white to-pink-soft/30"
+  >
+    <div className="max-w-6xl mx-auto">
+      {/* Header */}
+      <div className="text-center mb-16">
+        <h2
+          className={`font-display text-4xl md:text-6xl text-love-dark mb-4 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          Our Memories
+        </h2>
+        <p
+          className={`font-body text-lg text-love-light transition-all duration-700 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          Kangen Bangett Woiiii Sayanggggggg............
+        </p>
+      </div>
 
-        {/* Masonry Gallery */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-          {photos.map((photo, index) => (
-            <div
-              key={index}
-              className={`polaroid break-inside-avoid transition-all duration-700 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
-              style={{
-                transform: `rotate(${photo.rotation}deg)`,
-                transitionDelay: `${index * 150}ms`,
-              }}
-            >
-              <div className="relative overflow-hidden">
-                <img
-                  src={photo.src}
-                  alt={photo.caption}
-                  className="w-full h-auto object-cover transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-              <p className="font-display text-lg text-love-dark text-center mt-4 italic">
-                {photo.caption}
-              </p>
+      {/* Masonry Gallery */}
+      <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+        {photos.map((photo, index) => (
+          <div
+            key={index}
+            className={`polaroid break-inside-avoid transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+            style={{
+              transform: `rotate(${photo.rotation}deg)`,
+              transitionDelay: `${index * 150}ms`,
+            }}
+          >
+            <div className="relative overflow-hidden">
+              <img
+                src={photo.src}
+                alt={photo.caption}
+                className="w-full h-auto object-cover transition-transform duration-500 hover:scale-110"
+              />
             </div>
-          ))}
+            <p className="font-display text-lg text-love-dark text-center mt-4 italic">
+              {photo.caption}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* VIDEO BUTTON CARD */}
+      <div className="mt-16 w-full flex justify-center">
+        <div className="w-full max-w-4xl px-4">
+          <div className="glass rounded-3xl p-10 shadow-soft text-center">
+            <h3 className="font-display text-3xl md:text-4xl text-love-dark mb-3">
+              Ada Video Kita Juga 💕
+            </h3>
+
+            <p className="font-body text-love-light mb-8 text-base md:text-lg">
+              Klik ya sayang. Jangan lupa senyum pas nonton wkwk.
+            </p>
+
+            <a
+              href="https://youtube.com/shorts/8JxCTzAnlqc?feature=share"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-magnetic animate-wiggle inline-flex items-center gap-3 px-8 py-4 bg-pink-accent text-white rounded-full font-body text-lg font-semibold shadow-lg hover:shadow-xl hover:bg-pink-dark transition-all duration-500 delay-700"
+            >
+              🎬 Buka Video
+            </a>
+          </div>
         </div>
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 };
+
 
 // Closing Section
 const ClosingSection = () => {
@@ -554,7 +579,7 @@ const ClosingSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen relative flex items-center justify-center py-20 px-4 md:px-8 bg-gradient-to-b from-pink-soft/30 via-pink-soft/60 to-pink-soft overflow-hidden"
+      className="min-h-screen relative flex items-center justify-center py-15 px-4 md:px-8 bg-gradient-to-b from-pink-soft/30 via-pink-soft/60 to-pink-soft overflow-hidden"
     >
       {/* Background heartbeat heart */}
       <Heart
@@ -707,4 +732,4 @@ function App() {
   );
 }
 
-export default App; MusicPlayer;
+export default App;
