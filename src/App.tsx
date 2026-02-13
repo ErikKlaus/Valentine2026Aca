@@ -593,11 +593,11 @@ const ClosingSection = () => {
           </p>
 
           {/* Spotify button */}
-          <a
+         <a
             href="https://open.spotify.com/playlist/36a0QOyTLfHNXhyLJ46XnW?si=hSIOeghuTjyIsrrYUi8zNQ&pi=1MVoJ6MYT96ZA"
             target="_blank"
             rel="noopener noreferrer"
-            className={`btn-magnetic inline-flex items-center gap-3 px-8 py-4 bg-pink-accent text-white rounded-full font-body text-lg font-semibold shadow-lg hover:shadow-xl hover:bg-pink-dark transition-all duration-500 delay-700 ${
+            className={`btn-magnetic animate-wiggle inline-flex items-center gap-3 px-8 py-4 bg-pink-accent text-white rounded-full font-body text-lg font-semibold shadow-lg hover:shadow-xl hover:bg-pink-dark transition-all duration-500 delay-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
