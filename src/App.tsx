@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Heart, Mail, MapPin, Calendar, Infinity, Send, Music, Play } from "lucide-react";
+import { Heart, Music } from "lucide-react";
 
 // Falling petals component
 const FallingPetals = () => {
@@ -533,7 +533,6 @@ const GallerySection = () => {
 const ClosingSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [showReply, setShowReply] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
